@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:bookapp/components/my-films-card.dart';
 import 'package:bookapp/components/seller-card.dart';
 import 'package:bookapp/models/Movie.dart';
@@ -116,6 +118,10 @@ class Home extends StatelessWidget {
       );
 
   Container buildMyFilms(BuildContext context) {
+    Future<SharedPreferences> prefs = SharedPreferences.getInstance();
+
+    List films;
+    prefs.then((value) => {films = json.decode(value.getString("films"))});
     return Container(
         margin: EdgeInsets.only(top: 35),
         child: Column(
@@ -134,8 +140,12 @@ class Home extends StatelessWidget {
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * .4,
                 child: ListView.builder(
+                  itemCount: films.length,
                   itemBuilder: (context, index) => MyFilmsCard(
-                      "assets/images/a.jpg", "3s 10dk", "3.5", "50%"),
+                      "assets/images/a.jpg",
+                      "3s 10dk",
+                      films[index]['voteAverage'],
+                      "50%"),
                   scrollDirection: Axis.horizontal,
                 ),
               ),

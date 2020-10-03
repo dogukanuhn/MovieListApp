@@ -13,4 +13,4 @@ const movieTopRated = "movie/top_rated?language=tr-TR&";
 const movieDetail = "movie/_?language=tr-TR&";
 const movieVideos = "movie/_/videos?";
 
-const apiKey = "ed62d6e42f519b39cad7fa929cebb6a3";
+const apiKey = "";

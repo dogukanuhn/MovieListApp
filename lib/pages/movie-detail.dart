@@ -119,8 +119,10 @@ class _MovieDetailState extends State<MovieDetailPage> {
     if (prefs.containsKey("films")) {
       films = json.decode(prefs.getString("films"));
 
-      if (films.firstWhere((element) => element['id'] == bookmark.id) != null) {
-        films.remove(bookmark);
+      if (films.firstWhere((element) => element['id'] == bookmark.id,
+              orElse: () => null) !=
+          null) {
+        films.removeWhere((a) => a['id'] == bookmark.id);
       } else {
         films.add(bookmark);
       }
