@@ -1,16 +1,18 @@
-# bookapp
+# Movie App
 
-A new Flutter project.
+An application for find movie detail and bookmark movies.
+I used https://developers.themoviedb.org for movies information
 
-## Getting Started
+# For Personel Usage
 
-This project is a starting point for a Flutter application.
+Change apikey in constants.dart 
 
-A few resources to get you started if this is your first Flutter project:
+# Problems
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [ ] SharedPreferences Bookmark Problem
+- [ ] Clean Code
+- [ ] State Management
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# UI
+![alt text](https://i.hizliresim.com/ngwBqf.jpg)
