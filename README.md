@@ -1,7 +1,7 @@
 # Movie App
 
-An application for find movie detail and bookmark movies.
-I used https://developers.themoviedb.org for movies information
+An application for finding movie detail and bookmarking movies.
+I used https://developers.themoviedb.org for movie information
 
 # For Personel Usage
 
